@@ -34,8 +34,8 @@ RUN mamba create -y -n bioinfo \
     spades \
     quast \
     seqtk \
-    trimmomatic \
-    multiqc \
+  #  trimmomatic \
+  #  multiqc \
     seqsero2
 
 RUN echo "source /opt/conda/etc/profile.d/conda.sh" >> /home/vscode/.bashrc && \
