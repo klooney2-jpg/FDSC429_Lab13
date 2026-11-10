@@ -13,3 +13,4 @@ https://github.com/lhudson08/FDSC429_Lab13/releases/download/v1.0/utk-b1-0204_2.
 utk-b1-0234:
 https://github.com/lhudson08/FDSC429_Lab13/releases/download/v1.0/utk-b1-0234_1.trimP.fastq.gz
 https://github.com/lhudson08/FDSC429_Lab13/releases/download/v1.0/utk-b1-0234_2.trimP.fastq.gz
+
