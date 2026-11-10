@@ -30,6 +30,7 @@ ls -lh
 
 > [!NOTE]
 > -h   When used with the -l option, use unit suffixes: Byte, Kilobyte, Megabyte, Gigabyte, Terabyte and Petabyte in order to reduce the number of digits to four or fewer using base 2 for sizes.
+
 :question: _What are the file sizes?_  
 
 ## Decompress read files  
