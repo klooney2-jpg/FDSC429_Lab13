@@ -85,35 +85,54 @@ We are already starting with trimmed fastq files, so we will skip this step.
 
 ## Genome Assembly
 "How do reads become a genome?"
+```
 spades.py -1 reads_R1.fastq -2 reads_R2.fastq -o assembly
+```
 
 ### Explore FASTA file
 head contigs.fasta
 What is a contig?
 
 ### Count Contigs
+```
 grep ">" contigs.fasta | wc -l
+```
+```
 grep "^>" assembly.fasta | wc -l
+```
+```
 grep -c ">" contigs.fasta
+```
 ### Identify Largest Contigs
+```
 awk '/^>/ {if(seqlen){print seqlen}; seqlen=0; next} {seqlen+=length($0)} END {print seqlen}' assembly.fasta | sort -nr | head
+```
 
 ## Assembly QC
+```
 quast assembly/contigs.fasta
+```
 How many contigs are in this assembly?
 Largest contig?
 N50?
 Is assembly quality acceptable?
 How do reads differ from contigs?
 
-## Annotate genomes (Prokka, depending on server availability)
+## Identify using BLAST
 
+### Download largest contig
 
-## Perform BLAST searches
+### Perform BLAST search
+In a browser, go to this site: https://blast.ncbi.nlm.nih.gov/Blast.cgi
+Click "Nucleotide BLAST"
+Under "Enter Query Sequence", click "Choose File", and upload the largest contig file.
+At the bottom, check the box next to "Show results in a new window"
+Click "BLAST"
+
 "What is the organism?"
 BLAST one contig
 blastn
-## Download contigs
+
 
 
 
