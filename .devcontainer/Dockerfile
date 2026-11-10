@@ -25,6 +25,8 @@ RUN wget -O Miniforge.sh \
 
 ENV PATH="/opt/conda/bin:${PATH}"
 
+RUN conda install -y -n base -c conda-forge mamba
+
 # Create bioinformatics environment
 RUN mamba create -y -n bioinfo \
     -c conda-forge \
