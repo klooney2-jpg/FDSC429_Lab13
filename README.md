@@ -11,18 +11,30 @@ wget "URL"
 | utk-b1-0175 | 4<br/>7<br/>12 | https://github.com/lhudson08/FDSC429_Lab13/releases/download/v1.0/utk-b1-0234_1.trimP.fastq.gz<br/>https://github.com/lhudson08/FDSC429_Lab13/releases/download/v1.0/utk-b1-0234_2.trimP.fastq.gz |
 
 ## Explore the filesystem
-:question: _What directory are you working in?_  
+return working directory name
 ```
 pwd
 ```  
-:question: _What files are present?_  
+:question: _What directory are you working in?_  
+
+list directory contents
 ```
 ls
-```  
-:question: _What are the file sizes?_  
+```
+:question: _What files are present?_  
 ```
 ls -lh
 ```  
+> [!NOTE]
+>      -l      List files in the long format. The following information is displayed for each file: file mode, number of links, owner name,
+     group name, number of bytes in the file, abbreviated month, day-of-month file was last modified, hour file last
+     modified, minute file last modified, and the pathname.  If the file or directory has extended attributes, the
+     permissions field printed by the -l option is followed by a '@' character.  Otherwise, if the file or directory has
+     extended security information (such as an access control list), the permissions field printed by the -l option is
+     followed by a '+' character.
+>      -h      When used with the -l option, use unit suffixes: Byte, Kilobyte, Megabyte, Gigabyte, Terabyte and Petabyte in
+             order to reduce the number of digits to four or fewer using base 2 for sizes.
+:question: _What are the file sizes?_  
 
 ## Decompress read files  
 ```
