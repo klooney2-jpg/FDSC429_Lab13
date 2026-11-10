@@ -57,7 +57,7 @@ _Which line contains quality information?_
 grep "^@" utk-b1-0000_1.trimP.fastq | wc -l
 ```  
 
-or
+or  
 
 ```
 wc -l utk-b1-0000_1.trimP.fastq
