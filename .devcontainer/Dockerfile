@@ -36,7 +36,7 @@ RUN mamba create -y -n bioinfo \
     seqtk \
   #  trimmomatic \
   #  multiqc \
-    seqsero2
+  #  seqsero2
 
 RUN echo "source /opt/conda/etc/profile.d/conda.sh" >> /home/vscode/.bashrc && \
     echo "conda activate bioinfo" >> /home/vscode/.bashrc
