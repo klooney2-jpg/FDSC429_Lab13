@@ -33,7 +33,11 @@ ls -lh
 ## Decompress read files  
 ```
 gunzip utk-b1-0000_1.trimP.fastq.gz utk-b1-0000_2.trimP.fastq.gz
-```   
+```
+_What are the file sizes after decompressing?_  
+```
+ls -lh
+```  
 
 ## Explore FASTQ reads
 
@@ -57,3 +61,31 @@ or
 wc -l utk-b1-0000_1.trimP.fastq
 ```  
 then divide that number by 4 (Remember: 4 lines = 1 read)
+
+## Install FastQC
+```
+sudo apt update
+```
+```
+sudo apt install fastqc
+```
+## Check FastQC Installation & See Help Info
+```
+fastqc -h
+``` 
+
+## Run FastQC
+```
+fastqc utk-b1-0175_1.trimP.fastq utk-b1-0175_2.trimP.fastq 
+```
+For each input fastq file, it should output:
+- 1 zip file
+- 1 html file
+
+In the Explorer, right click the utk-b1-0175_1.trimP_fastqc.html file, then click "Download".
+Open the downloaded file.
+
+
+```
+w
+``` 
