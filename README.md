@@ -22,7 +22,7 @@ https://github.com/lhudson08/FDSC429_Lab13/releases/download/v1.0/utk-b1-0234_2.
 What directory are you working in?  
 `pwd`  
 
-What files are present?
+What files are present?  
 `ls`
 
 What are the file sizes?  
@@ -35,9 +35,9 @@ What are the file sizes?
 
 `head filename_R1.fastq`
 
-How many lines per read?
-Which line contains sequence?
-Which line contains quality information?
+How many lines per read?  
+Which line contains sequence?  
+Which line contains quality information?  
 
 ## Count reads
 
