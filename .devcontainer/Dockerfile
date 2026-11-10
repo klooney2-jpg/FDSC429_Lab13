@@ -33,7 +33,7 @@ RUN mamba create -y -n bioinfo \
     -c bioconda \
     spades \
     quast \
-    seqtk # \
+    seqtk
   #  trimmomatic \
   #  multiqc \
   #  seqsero2
