@@ -28,7 +28,7 @@ _What files are present?_
 _What are the file sizes?_  
 `ls -lh`
 
-## uncompress read files  
+## Decompress read files  
 `gunzip utk-b1-0000_1.trimP.fastq.gz utk-b1-0000_2.trimP.fastq.gz`  
 
 ## Explore FASTQ reads
@@ -43,4 +43,7 @@ _Which line contains quality information?_
 
 `grep "^@" utk-b1-0000_1.trimP.fastq | wc -l`
 
-Remember: 4 lines = 1 read
+or
+
+`wc -l utk-b1-0000_1.trimP.fastq`
+then divide that number by 4 (Remember: 4 lines = 1 read)
