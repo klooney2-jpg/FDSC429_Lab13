@@ -22,20 +22,30 @@ https://github.com/lhudson08/FDSC429_Lab13/releases/download/v1.0/utk-b1-0234_2.
 ## Explore the filesystem
 
 _What directory are you working in?_  
-`pwd`  
+```
+pwd
+```  
 
 _What files are present?_  
-`ls`
+```
+ls
+```  
 
 _What are the file sizes?_  
-`ls -lh`
+```
+ls -lh
+```  
 
 ## Decompress read files  
-`gunzip utk-b1-0000_1.trimP.fastq.gz utk-b1-0000_2.trimP.fastq.gz`  
+```
+gunzip utk-b1-0000_1.trimP.fastq.gz utk-b1-0000_2.trimP.fastq.gz
+```   
 
 ## Explore FASTQ reads
 
-`head utk-b1-0000_1.trimP.fastq`
+```
+head utk-b1-0000_1.trimP.fastq
+```  
 
 _How many lines per read?_  
 _Which line contains sequence?_  
@@ -43,9 +53,13 @@ _Which line contains quality information?_
 
 ## Count reads
 
-`grep "^@" utk-b1-0000_1.trimP.fastq | wc -l`
+```
+grep "^@" utk-b1-0000_1.trimP.fastq | wc -l
+```  
 
 or
 
-`wc -l utk-b1-0000_1.trimP.fastq`  
+```
+wc -l utk-b1-0000_1.trimP.fastq
+```  
 then divide that number by 4 (Remember: 4 lines = 1 read)
