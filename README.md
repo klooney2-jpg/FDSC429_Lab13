@@ -75,10 +75,11 @@ For each input fastq file, it should output:
 - 1 html file
 In the Explorer, right click the utk-b1-0175_1.trimP_fastqc.html file, then click "Download".
 Open the downloaded file.
-How many reads?
-Average quality?
-Adapter contamination?
-Are the reads high quality?
+
+How many reads?  
+Average quality?  
+Adapter contamination?  
+Are the reads high quality?  
 
 ## Trim Reads
 We are already starting with trimmed fastq files, so we will skip this step.
@@ -90,7 +91,9 @@ spades.py -1 reads_R1.fastq -2 reads_R2.fastq -o assembly
 ```
 
 ### Explore FASTA file
+```
 head contigs.fasta
+```
 What is a contig?
 
 ### Count Contigs
@@ -112,26 +115,24 @@ awk '/^>/ {if(seqlen){print seqlen}; seqlen=0; next} {seqlen+=length($0)} END {p
 ```
 quast assembly/contigs.fasta
 ```
-How many contigs are in this assembly?
-Largest contig?
-N50?
-Is assembly quality acceptable?
-How do reads differ from contigs?
+How many contigs are in this assembly?  
+Largest contig?  
+N50?  
+Is assembly quality acceptable?  
+How do reads differ from contigs?  
 
 ## Identify using BLAST
 
 ### Download largest contig
 
 ### Perform BLAST search
-In a browser, go to this site: https://blast.ncbi.nlm.nih.gov/Blast.cgi
-Click "Nucleotide BLAST"
-Under "Enter Query Sequence", click "Choose File", and upload the largest contig file.
-At the bottom, check the box next to "Show results in a new window"
+In a browser, go to this site: https://blast.ncbi.nlm.nih.gov/Blast.cgi  
+Click "Nucleotide BLAST"  
+Under "Enter Query Sequence", click "Choose File", and upload the largest contig file.  
+At the bottom, check the box next to "Show results in a new window"  
 Click "BLAST"
 
 "What is the organism?"
-BLAST one contig
-blastn
 
 
 
