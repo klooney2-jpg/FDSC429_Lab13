@@ -2,7 +2,7 @@
 
 ## Download read files
 
-wget "PASTE_RELEASE_URL_HERE"
+`wget "PASTE_RELEASE_URL_HERE"`  
 
 utk-b1-0175:  
 https://github.com/lhudson08/FDSC429_Lab13/releases/download/v1.0/utk-b1-0175_1.trimP.fastq.gz  
