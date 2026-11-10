@@ -45,5 +45,5 @@ _Which line contains quality information?_
 
 or
 
-`wc -l utk-b1-0000_1.trimP.fastq`
+`wc -l utk-b1-0000_1.trimP.fastq`  
 then divide that number by 4 (Remember: 4 lines = 1 read)
