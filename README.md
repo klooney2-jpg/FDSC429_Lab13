@@ -29,6 +29,11 @@ pwd
 ```
 ls
 ```
+
+```
+ls -lh
+```
+
 > [!NOTE]
 > **ls**<br/>
 > For each operand that names a file of a type other than directory: displays its name as well as any requested, associated information.<br/>
@@ -42,11 +47,8 @@ ls
 > Otherwise, if the file or directory has extended security information (such as an access control list), the permissions field printed by the -l option is followed by a '+' character.<br/>
 **-h**<br/>
 > When used with the -l option, use unit suffixes: Byte, Kilobyte, Megabyte, Gigabyte, Terabyte and Petabyte in order to reduce the number of digits to four or fewer using base 2 for sizes.
-:question: _What files are present?_  
-```
-ls -lh
-```  
 
+:question: _What files are present?_  
 :question: _What are the file sizes?_  
 
 ## Decompress read files  
@@ -60,10 +62,12 @@ gunzip utk-b1-0000_1.trimP.fastq.gz utk-b1-0000_2.trimP.fastq.gz
 :question: _What are the file sizes after decompressing?_  
 ```
 ls -lh
-```  
+```
+
 ## FASTQ files
 :question: "What are sequencing reads?"  
 :question: What does a FASTQ record look like?
+
 ### Explore FASTQ file
 ```
 head utk-b1-0000_1.trimP.fastq
@@ -109,14 +113,15 @@ then divide that number by 4
 ```
 sudo apt update
 ```
+```
+sudo apt install fastqc
+```
+
 > [!NOTE]
 > **sudo**<br/>
 > execute a command as another user<br/>
 > allows a permitted user to execute a command as the superuser or another user, as specified by the security policy.
 
-```
-sudo apt install fastqc
-```
 ### Check FastQC Installation & See Help Info
 ```
 fastqc -h
@@ -154,17 +159,11 @@ head contigs.fasta
 
 ### Count Contigs
 ```
-grep ">" contigs.fasta | wc -l
-```
-```
-grep "^>" assembly.fasta | wc -l
-```
-```
-grep -c ">" contigs.fasta
+grep "^>" contigs.fasta | wc -l
 ```
 ### Identify Largest Contigs
 ```
-awk '/^>/ {if(seqlen){print seqlen}; seqlen=0; next} {seqlen+=length($0)} END {print seqlen}' assembly.fasta | sort -nr | head
+awk '/^>/ {if(seqlen){print seqlen}; seqlen=0; next} {seqlen+=length($0)} END {print seqlen}' contigs.fasta | sort -nr | head
 ```
 > [!NOTE]
 > **awk**<br/>
