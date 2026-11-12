@@ -73,6 +73,7 @@ head utk-b1-0000_1.trimP.fastq
 > display first lines of a file
 > displays the first count lines or bytes of each of the specified files, or of the standard input if no files are specified.<br/>
 > If count is omitted it defaults to 10.
+
 :question: _How many lines per read?_  
 :question: _Which line contains sequence?_  
 :question: _Which line contains quality information?_  
