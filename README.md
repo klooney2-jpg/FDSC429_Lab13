@@ -82,6 +82,14 @@ head utk-b1-0000_1.trimP.fastq
 ```
 grep "^@" utk-b1-0000_1.trimP.fastq | wc -l
 ```  
+OR  
+```
+wc -l utk-b1-0000_1.trimP.fastq
+```  
+then divide that number by 4 
+> [!TIP]
+> 4 lines = 1 read
+
 > [!NOTE]
 > **grep**<br/>
 > file pattern searcher<br/>
@@ -93,13 +101,6 @@ grep "^@" utk-b1-0000_1.trimP.fastq | wc -l
 > displays the number of lines, words, and bytes contained in each input file, or standard input (if no file is specified) to the standard output.
 > **-l**
 > The number of lines in each input file is written to the standard output.
-or  
-```
-wc -l utk-b1-0000_1.trimP.fastq
-```  
-then divide that number by 4 
-> [!TIP]
-> 4 lines = 1 read
 
 :question: How many reads are present?
 
