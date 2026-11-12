@@ -85,7 +85,8 @@ grep "^@" utk-b1-0000_1.trimP.fastq | wc -l
 > [!NOTE]
 > **grep**<br/>
 > file pattern searcher<br/>
-> searches any given input files, selecting lines that match one or more patterns. 
+> searches any given input files, selecting lines that match one or more patterns.
+
 > [!NOTE]
 > **wc**<br/>
 > word, line, character, and byte count<br/>
