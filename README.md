@@ -153,17 +153,17 @@ spades.py --isolate --only-assembler --phred-offset 33 -1 utk-b1-0000_1.trimP.fa
 
 ### Explore FASTA file
 ```
-head contigs.fasta
+head utk-b1-0175_contigs.fasta
 ```
 :question: What is a contig?
 
 ### Count Contigs
 ```
-grep "^>" contigs.fasta | wc -l
+grep "^>" utk-b1-0175_contigs.fasta | wc -l
 ```
 ### Identify Largest Contigs
 ```
-awk '/^>/ {if(seqlen){print seqlen}; seqlen=0; next} {seqlen+=length($0)} END {print seqlen}' contigs.fasta | sort -nr | head
+awk '/^>/ {if(seqlen){print seqlen}; seqlen=0; next} {seqlen+=length($0)} END {print seqlen}' utk-b1-0175_contigs.fasta | sort -nr | head
 ```
 > [!NOTE]
 > **awk**<br/>
@@ -179,12 +179,12 @@ awk '/^>/ {if(seqlen){print seqlen}; seqlen=0; next} {seqlen+=length($0)} END {p
 
 ### extract the first (largest) SPAdes contig into its own FASTA file
 ```
-awk 'BEGIN{p=0}/^>/{if(p) exit; p=1}p' assembly/contigs.fasta > largest_contig.fasta
+awk 'BEGIN{p=0}/^>/{if(p) exit; p=1}p' utk-b1-0175_contigs.fasta > largest_contig.fasta
 ```
 
 ## Assembly QC
 ```
-quast assembly/contigs.fasta
+quast utk-b1-0175_contigs.fasta
 ```
 :question: How many contigs are in this assembly?  
 :question: Largest contig?  
