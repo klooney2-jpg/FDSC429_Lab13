@@ -31,12 +31,8 @@ RUN conda install -y -n base -c conda-forge mamba
 RUN mamba create -y -n bioinfo \
     -c conda-forge \
     -c bioconda \
-    spades \
     quast \
     seqtk
-  #  trimmomatic \
-  #  multiqc \
-  #  seqsero2
 
 RUN echo "source /opt/conda/etc/profile.d/conda.sh" >> /home/vscode/.bashrc && \
     echo "conda activate bioinfo" >> /home/vscode/.bashrc
