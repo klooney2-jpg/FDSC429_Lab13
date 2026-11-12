@@ -146,9 +146,9 @@ Open the downloaded file.
 > We are already starting with trimmed fastq files, so we will skip this step.
 
 ## Genome Assembly
-:question: "How do reads become a genome?"
+:question: "How do reads become a genome assembly?"
 ```
-spades.py -1 reads_R1.fastq -2 reads_R2.fastq -o assembly
+spades.py --isolate --only-assembler --phred-offset 33 -1 utk-b1-0000_1.trimP.fastq.gz -2 utk-b1-0000_2.trimP.fastq.gz -o assembly
 ```
 
 ### Explore FASTA file
@@ -176,6 +176,11 @@ awk '/^>/ {if(seqlen){print seqlen}; seqlen=0; next} {seqlen+=length($0)} END {p
 > **sort**<br/>
 > sort or merge records (lines) of text and binary files<br/>
 > sorts text and binary files by lines.
+
+### extract the first (largest) SPAdes contig into its own FASTA file
+```
+awk 'BEGIN{p=0}/^>/{if(p) exit; p=1}p' assembly/contigs.fasta > largest_contig.fasta
+```
 
 ## Assembly QC
 ```
